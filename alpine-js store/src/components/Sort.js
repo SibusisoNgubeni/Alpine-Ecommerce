@@ -1,6 +1,6 @@
 const sort = () => {
   return`
-  <div x-data="{ sorting: 'default' }" class="flex justify-end sm:w-[95%] max-w-[21rem] md:w-40 flex-wrap items-end">
+  <div x-data="{ sorting: 'default' }" class="flex justify-end sm:w-[95%] max-w-[21rem] md:w-40 flex-wrap items-end mb-5 ">
    <div class="w-full md:w-auto md:ml-auto mr-4">
   <label for="sort" class="w-20 my-auto font-semibold">Sort by:</label>
   <select 

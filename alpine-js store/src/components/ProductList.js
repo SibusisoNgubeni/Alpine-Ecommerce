@@ -20,7 +20,7 @@ const ProductList = () =>
             <div class="lg:max-h-[130rem] max-w-xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-2 items-center lg:max-w-none my-4">
             
             <template x-for="product in data" :key="product.id">
-                <div class="product-card border-black p-4">
+                <div class="product-card">
                   <div class="product-title" x-text="product.title"></div>
                   <img :src="product.image" alt="Product Image" class="product-image"/>
                 

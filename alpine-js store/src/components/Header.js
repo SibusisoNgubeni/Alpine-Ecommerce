@@ -4,7 +4,7 @@
 const Header = () => `
   <header class="sticky z-50 top-0" x-data="{ open: false }">
 
-    <nav class="bg-gray-500 border-gray-200">
+    <nav class="bg-gray-500 border-gray-200 mb-5">
 
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 w-full">
            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
