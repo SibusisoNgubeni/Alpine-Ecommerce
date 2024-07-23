@@ -1,5 +1,4 @@
 import sort from "./Sort";
-import modal from "./modal";
 import "/style.css"
 
 
@@ -26,11 +25,11 @@ const ProductList = () => `
             <div class="lg:max-h-[130rem] max-w-xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-2 items-center lg:max-w-none my-4">
             
             <template x-for="product in data" :key="product.id">
-                <div class="product-card" @click="openModal()">
+                <div class="product-card" @click="openModal">
+                  <div x-show="open">
+                  
+                  </div>
 
-                 <div x-show="open">
-                   ${modal()}
-                 </div>
                   <div class="product-title" x-text="product.title"></div>
                   <img :src="product.image" alt="Product Image" class="product-image "/>
                 
