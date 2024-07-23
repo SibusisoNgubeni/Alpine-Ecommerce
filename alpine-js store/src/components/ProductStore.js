@@ -22,7 +22,7 @@ export function fetchData() {
 
 export function modalData() {
   return {
-    modalOpen: false,
+    modalOpen: true,
     selectedProduct: null,
     loadingModal: false,
     async showModal(productId) {

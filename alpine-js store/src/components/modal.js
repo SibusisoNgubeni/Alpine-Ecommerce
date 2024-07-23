@@ -1,27 +1,22 @@
-const modal = () => {`
+import '/style.css';
 
-    <div x-data="modalData()" x-init="modalData()">
-        <template x-if="loading">
-          <div>Loading...</div>
-        </template>
+const modal = () => `
+  <div x-data="{
+    product: {},
+    async init() {
+      const response = await fetch('https://fakestoreapi.com/products/${productId}');
+      const data = await response.json();
+      this.product = data;
+    }
+  }" x-init="init()">
+    <div class="modal-card">
+      <div class="modal-product-title" x-text="product.title"></div>
+      <img :src="product.image" alt="Product Image" class="modal-image" />
+      <div class="product-price" x-text="'$' + product.price"></div>
+      <div class="product-category" x-text="product.category"></div>
+      <div class="product-rating" x-text="'Rating: ' + product.rating.rate + ' (' + product.rating.count + ')'"></div>
+    </div>
+  </div>
+`;
 
-        <template x-if="error">
-          <div>Error: <span x-text="error.message"></span></div>
-        </template>
-
-    <div id="myModal" class="modal"
-    x-show="modalOpen" x-on:click.away="closeModal"
-   <div class="modal-card" x-on:click="open = !open">product-card => x-on:click="open = ! open
-
-       
-        <div class="modal-content">
-           <div class="product-title h-24 text-xl text-gray-600 font-bold" x-text="product.title"></div>
-               <img :src="product.image" alt="Product Image" class="product-image w-64 h-64"/>
-             
-               <div class="product-price" x-text="'$' + product.price"></div>
-               <div class="product-rating" x-text="'Rating: ' + product.rating.rate + ' (' + product.rating.count + ')'"></div>
-               <div class="product-category" x-text="product.category"></div>
-             </div>
-   </div>
-   `
-}
+export default modal;
