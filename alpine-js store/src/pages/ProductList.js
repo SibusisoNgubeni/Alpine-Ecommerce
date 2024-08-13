@@ -1,12 +1,14 @@
-import sort from "../components/Sort";
+import producSort from "../components/Sort";
+import CategoryFilter from "../components/CategoryFilter";
 import "/style.css"
 
 const ProductList = () => `
 
-     
-
-       ${sort()}
       <div x-data="fetchData()" x-init="fetchData()">
+      <div class="filter">
+      ${producSort().template}
+      ${CategoryFilter()}
+      </div>
         <template x-if="loading">
           <div>Loading...</div>
         </template>
