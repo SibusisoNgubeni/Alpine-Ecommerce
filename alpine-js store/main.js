@@ -1,7 +1,7 @@
 import Header from './src/components/Header';
-import ProductList from './src/components/ProductList';
-import { fetchData } from './src/components/ProductStore';
-import ModalData from './src/components/ModalData';
+import ProductList from './src/pages/ProductList';
+import { fetchData } from './src/pages/ProductStore';
+
 import Alpine from 'alpinejs';
 
 document.getElementById('app').innerHTML = `
@@ -12,7 +12,7 @@ document.getElementById('app').innerHTML = `
 
 document.addEventListener('alpine:init', () => {
   Alpine.data('fetchData', fetchData);
-  Alpine.data('ModalData', ModalData);
+  
 });
 
 Alpine.start();

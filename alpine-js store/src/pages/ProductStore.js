@@ -1,4 +1,3 @@
-
 export function fetchData() {
   return {
     loading: false,

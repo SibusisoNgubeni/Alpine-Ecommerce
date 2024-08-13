@@ -1,10 +1,5 @@
-import sort from "./Sort";
+import sort from "../components/Sort";
 import "/style.css"
-
-
- 
-
-
 
 const ProductList = () => `
 
@@ -54,4 +49,3 @@ const ProductList = () => `
   
   
   export default ProductList;
-  

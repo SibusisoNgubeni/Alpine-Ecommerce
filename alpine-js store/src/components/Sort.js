@@ -1,4 +1,3 @@
-
 const Sort = () => `
   <div class="sort mt-10 mb-10">
     <label for="sort">Sort by:</label>
