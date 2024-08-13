@@ -1,5 +1,6 @@
 import producSort from "../components/Sort";
 import CategoryFilter from "../components/CategoryFilter";
+import { modal } from "../components/modal";
 import "/style.css"
 
 const ProductList = () => `
@@ -22,7 +23,7 @@ const ProductList = () => `
             <div class="lg:max-h-[130rem] max-w-xl mx-auto grid gap-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-2 items-center lg:max-w-none my-4">
             
             <template x-for="product in data" :key="product.id">
-                <div class="product-card" @click="openModal">
+                <div class="product-card" @click="openModal(product.id">
                   <div x-show="open">
                   
                   </div>
@@ -37,10 +38,20 @@ const ProductList = () => `
             </template>
 
             </div>
+
+            <template x-if="modalOpen">
+            <div x-data="modalData(selectedProductid)" x-init="init()">
+            $modal}
+            </div>
+            </template>
           </div>
         </template>
       </div>  
-
+ <template x-if="modalOpen">
+      <div x-data="modalData(selectedProductId)" x-init="init()">
+        ${modal}
+      </div>
+    </template>
 
       
 
